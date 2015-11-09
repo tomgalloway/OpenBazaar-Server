@@ -27,7 +27,6 @@ from api.restapi import OpenBazaarAPI
 from dht.storage import PersistentStorage, ForgetfulStorage
 from market.profile import Profile
 from log import Logger, FileLogObserver
-from net.upnp import PortMapper
 
 
 def run(*args):
@@ -47,7 +46,6 @@ def run(*args):
 
     # NAT traversal
     port = args[2]
-    PortMapper().add_port_mapping(port, port, 'UDP')
     logger.info("Finding NAT Type...")
     while True:
         try:
