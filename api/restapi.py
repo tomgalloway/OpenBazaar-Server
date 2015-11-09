@@ -764,7 +764,7 @@ class OpenBazaarAPI(APIResource):
         for n in notifications:
             notification_json = {
                 "id": n[0],
-                "guid": n[1].encode("hex"),
+                "guid": n[1],
                 "handle": n[2],
                 "type": n[3],
                 "order_id": n[4],
